@@ -14,7 +14,7 @@
     );
 
     $fuManchu = array(
-    name => 'fu manchu',
+    name => 'Fu Manchu',
     color => 'brown'
     );
 
@@ -86,9 +86,9 @@
                     <?php echo $gentlemen[1][country] ?>
                 </h3>
                 <p><strong><?php echo $gentlemen[1][firstName] ?></strong> is a rather dapper
-                    <strong><?php echo $ageGroup[2] ?></strong>! He proudly wears a
+                    <strong><?php echo $ageGroup[1] ?></strong>! He proudly wears a
                     <strong><?php echo $fuManchu[name] ?></strong> that is colored in a gentle
-                    <strong><?php echo $fuManchu[color] ?></strong></p>
+                    <strong><?php echo $fuManchu[color] ?></strong>.</p>
                 </p>
 
                 <h3>
