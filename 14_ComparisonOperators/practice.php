@@ -1,9 +1,16 @@
 <?php
 	
 	// Constants
-
+    define('TITLE', 'Comparison Operators');
 	
 	// Custom Variables
+    $myName = 'Chris';
+    $lessonNum = 14;
+    $year = date('Y');
+
+    $yearsOnEarth = 25.32;
+    $favoriteStringNum = "1";
+    $birthCountry = "Canada";
 
 
 ?>
@@ -11,7 +18,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>PHP <!-- TITLE --></title>
+		<title>PHP <?php echo TITLE ?></title>
 		<link href="../assets/styles.css" rel="stylesheet">
 	</head>
 	<body>
@@ -20,7 +27,7 @@
 				<img src="../assets/img/logo.png" alt="PHP">
 			</a>
 			
-			<h1>Tutorial <!-- LESSON NUMBER -->: <small><!-- TITLE --></small></h1>
+			<h1>Tutorial <?php echo $lessonNum ?>: <small><?php echo TITLE ?></small></h1>
 			<hr>
 			
 			<h2>Your Example</h2>
@@ -29,42 +36,65 @@
 				
 				<h3>Equal <code>==</code></h3>
 				<?php
-					// your code here
+					if ($yearsOnEarth == 25.32) {
+                        echo "<p>Your age is equal to $yearsOnEarth</p>";
+                    };
 				?>
 				
 				<h3>Identical <code>===</code></h3>
 				<?php
-					// your code here
+				    if ($favoriteStringNum == 1) {
+                        echo "<p>Your favorite number is an integer</p>";
+                    } else if ($favoriteStringNum === "1") {
+                        echo "<p>Your favorite number is a string called 1!</p>";
+                    } else {
+                        echo "<p>You must have a different favorite number than 1 the integer or 1 the string.</p>";
+                    }
 				?>
 				
 				<h3>Not Equal <code>!=</code></h3>
 				<?php
-					// your code here
+					if ($birthCountry != "Mexico") {
+                        echo "<p>Excuse me, senor, you must not be from around here.</p>";
+                    }
 				?>
 				
 				<h3>Not Identical <code>!==</code></h3>
 				<?php
-					// your code here
+					if ($yearsOnEarth !== "25.32") {
+                        echo "<p>You are not exactly the string '$yearsOnEarth'</p>";
+                    } else {
+                        echo "<p>You are exactly the string '$yearsOnEarth</p>";
+                        
+                    }
 				?>
 				
 				<h3>Less Than <code>&lt;</code></h3>
 				<?php
-					// your code here
+					if ($lessonNum < 15) {
+                        echo "<p>You haven't quite made it to Lesson 15</p>";
+                    }
 				?>
 				
 				<h3>Greater Than <code>&gt;</code></h3>
 				<?php
-					// your code here
+					if ($lessonNum > 10) {
+                        echo "<p>You've made it past Lesson 10!</p>";
+                    }
 				?>
 				
 				<h3>Less Than or Equal To <code>&lt;=</code></h3>
 				<?php
-					// your code here
+					if ($lessonNum <= 14) {
+                        echo "<p>$lessonNum is less than or equal to 14</p>";
+                    }
 				?>
 				
 				<h3>Greater Than or Equal To <code>&gt;=</code></h3>
 				<?php
-					// your code here
+					if ($lessonNum >= 4) {
+                        echo "<p>$lessonNum is greater than or equal to 4</p>";
+                    }
 				?>
 				
 			</div><!-- end sandbox -->
@@ -73,7 +103,7 @@
 			
 			<hr>
 			
-			<small>&copy;<!-- YEAR --> - <!-- NAME --></small>
+			<small>&copy;<?php echo $year ?> - <?php echo $myName ?></small>
 		</div><!-- end wrapper -->
 		
 		<div class="copyright-info">
