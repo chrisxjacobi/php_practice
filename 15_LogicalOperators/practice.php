@@ -1,9 +1,17 @@
 <?php
 	
 	// Constants
-
+    define('TITLE', 'Logical Operators');
 	
 	// Custom Variables
+    $myName = 'Chris';
+    $lessonNumber = 15;
+
+    $userName = 'johnnyboy';
+    $password = 'qwerty';
+    $cartTotal = 19.99;
+    $couponCode = 'DiscountPlease';
+    
 
 
 ?>
@@ -11,7 +19,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>PHP <!-- TITLE --></title>
+		<title>PHP <?php echo TITLE ?></title>
 		<link href="../assets/styles.css" rel="stylesheet">
 	</head>
 	<body>
@@ -20,7 +28,7 @@
 				<img src="../assets/img/logo.png" alt="PHP">
 			</a>
 			
-			<h1>Tutorial <!-- LESSON NUMBER -->: <small><!-- TITLE --></small></h1>
+			<h1>Tutorial <?php echo $lessonNumber ?>: <small><?php echo TITLE ?></small></h1>
 			<hr>
 			
 			<h2>Your Example</h2>
@@ -29,27 +37,49 @@
 				
 				<h3>And <code>and</code></h3>
 				<?php
-					// your code here
+					if ($userName == 'johnnyboy' and $password == 'qwerty') {
+                        echo 'Login info is correct';
+                    } else {
+                        echo 'INCORRECT';
+                    }
 				?>
 				
 				<h3>Or <code>or</code></h3>
 				<?php
-					// your code here
+					if ($cartTotal > 15 or $couponCode == 'DiscountPlease') {
+                        echo "You get a discount!";
+                    } else {
+                        echo "You don't get a discount";
+                    }
 				?>
 				
 				<h3>Not <code>!</code></h3>
 				<?php
-					// your code here
+                    $ownDog = true;
+                
+					if (!$ownDog) {
+                        echo "You do not own a dog";
+                    } else {
+                        echo "You have a pup!";
+                    }
 				?>
 				
 				<h3>And <code>&amp;&amp;</code></h3>
 				<?php
-					// your code here
+                    if ($userName == 'johnnyboy' && $password == 'qwerty') {
+                        echo "Login info is correct";
+                    } else {
+                        echo "Wrong login info";
+                    }
 				?>
 				
 				<h3>Or <code>||</code></h3>
 				<?php
-					// your code here
+					if ($cartTotal > 15 || $couponCode == "DiscountPlease") {
+                        echo "You get a discount";
+                    } else {
+                        echo "no discount for you";
+                    }
 				?>
 				
 			</div><!-- end sandbox -->
@@ -58,7 +88,7 @@
 			
 			<hr>
 			
-			<small>&copy;<!-- YEAR --> - <!-- NAME --></small>
+			<small>&copy;<?php echo date('Y') ?> - <?php echo $myName ?></small>
 		</div><!-- end wrapper -->
 		
 		<div class="copyright-info">
