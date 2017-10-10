@@ -4,7 +4,7 @@
 	define("TITLE", "Foreach Loop");
 	
 	// Custom Variables
-	$myName	= "Brad Hussey";
+	$myName	= "Chris";
 	$lessonNum	= 21;
 
 ?>
@@ -30,7 +30,11 @@
 				
 				<?php
 				 
-				    // your code here
+				    $moustaches = array('Handlebar', 'Salvador Dali', 'Fu Manchu');
+                
+                    foreach ($moustaches as $moustache) {
+                        echo "I like the $moustache <br>";
+                    }
 				 
 				?>
 				

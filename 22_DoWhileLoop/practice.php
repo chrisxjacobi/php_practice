@@ -4,7 +4,7 @@
 	define("TITLE", "Do While Loop");
 	
 	// Custom Variables
-	$myName	= "Brad Hussey";
+	$myName	= "Chris";
 	$lessonNum	= 22;
 	
 ?>
@@ -29,8 +29,12 @@
 			<div class="sandbox">
 				
 				<?php
+                    $i = 1;
 				 
-				    // your code here
+				    do {
+                        echo "Number: $i <br>";
+                        $i++;
+                    } while ($i <= 10);
 				 
 				?>
 				

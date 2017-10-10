@@ -1,17 +1,19 @@
 <?php
 	
 	// Constants
-
+    define('TITLE', 'While Loop');
 	
 	// Custom Variables
-
+    $myName = 'Chris';
+    $lessonNum = 19;
+    $year = date('Y');
 
 ?>
 
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>PHP <!-- TITLE --></title>
+		<title>PHP <?php echo TITLE ?></title>
 		<link href="../assets/styles.css" rel="stylesheet">
 	</head>
 	<body>
@@ -20,7 +22,7 @@
 				<img src="../assets/img/logo.png" alt="PHP">
 			</a>
 			
-			<h1>Tutorial <!-- LESSON NUMBER -->: <small><!-- TITLE --></small></h1>
+			<h1>Tutorial <?php echo $lessonNum ?>: <small><?php echo TITLE ?></small></h1>
 			<hr>
 			
 			<h2>Your Example</h2>
@@ -29,7 +31,12 @@
 				
 				<?php
 				 
-				    // your code here
+				    $startingNum = 10;
+            
+                    while ($startingNum <= 20) {
+                        echo $startingNum . "<br>";
+                        $startingNum++;
+                    }
 				 
 				?>
 				
@@ -39,7 +46,7 @@
 			
 			<hr>
 			
-			<small>&copy;<!-- YEAR --> - <!-- NAME --></small>
+			<small>&copy;<?php echo $year ?> - <?php echo $myName ?></small>
 		</div><!-- end wrapper -->
 		
 		<div class="copyright-info">
