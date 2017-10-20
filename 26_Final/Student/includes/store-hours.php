@@ -10,7 +10,7 @@
 
 // Set your timezone (codes listed at http://php.net/manual/en/timezones.php)
 // Delete the following line if you've already defined a timezone elsewhere.
-date_default_timezone_set('America/Detroit'); 
+date_default_timezone_set('America/Denver'); 
 
 // Define daily open hours
 // Must be in 24-hour format, separated by dash 
