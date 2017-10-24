@@ -82,6 +82,8 @@
 				echo '<h4 class="error">All fields required.</h4><a href="contact.php" class="button block">Go back and try again</a>';
 				exit;
 			}
+            
+            // add the recipent
 			
 			// Add the recipient email to a variable
 			$to	= "chrisxjacobi@gmail.com";
@@ -147,3 +149,5 @@
 	</div><!-- contact -->
 			
 <?php include('includes/footer.php'); ?>
+
+<!--finished lecture/project with info for resources/hosting-->
